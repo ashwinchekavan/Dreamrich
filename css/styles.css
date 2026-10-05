@@ -525,52 +525,41 @@ a:hover > * > .arrow, a:hover > .arrow, a:hover .arrow { background: rgba(247, 1
 .work-card p span { margin: 0 6px; opacity: .6; }
 
 /* ---------- Clients ---------- */
-
 .clients__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.clients__list img {
+  display: block;
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: transparent;
+}
+
+.clients__list li {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 28px 22px;
-  color: #3a363f;
+  justify-content: center;
+  min-height: 90px;
 }
-.client { line-height: 1; opacity: .85; transition: opacity .2s ease; white-space: nowrap; }
-.client:hover { opacity: 1; }
-.client--army { font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding-top: 22px; position: relative; }
-.client--army::before, .client--army::after {
-  content: "";
-  position: absolute;
-  left: 50%; top: 8px;
-  width: 44px; height: 1.5px;
-  margin-left: -22px;
-  background: currentColor;
-  transform: rotate(24deg);
+
+.clients__list img {
+  display: block;
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid #eee;
 }
-.client--army::after { transform: rotate(-24deg); }
-.client--ivy { font-family: var(--serif); font-size: 17px; letter-spacing: .12em; text-transform: uppercase; color: #77727b; }
-.client--zamorin { font-size: 19px; font-weight: 300; }
-.client--zamorin em { font-family: var(--script); font-size: 27px; font-style: normal; }
-.client--skylark { font-size: 17px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; }
-.client--ayoob {
-  position: relative;
-  padding-left: 40px;
-  font-size: 19px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-.client--ayoob::before {
-  content: "";
-  position: absolute;
-  left: 0; top: 50%;
-  width: 20px; height: 20px;
-  margin-top: -16px;
-  border: 6px double currentColor;
-  border-radius: 50%;
-}
-.client--ayoob small { display: block; margin-top: 3px; font-size: 8px; font-weight: 600; letter-spacing: .08em; }
-.client--kinza { font-size: 30px; font-weight: 300; letter-spacing: .02em; }
-.client--kinza span { font-size: .8em; }
-.client--cond { font-family: "Oswald", var(--sans); font-size: 24px; font-weight: 600; letter-spacing: .02em; text-transform: uppercase; }
+
 
 /* ---------- Vision ---------- */
 
